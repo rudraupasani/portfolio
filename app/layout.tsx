@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vivek Upasani",
-    description: "Portfolio of Vivek Upasani, a Full Stack Developer and Freelancer building Cluezy.",
+    title: "Rudra Upasani",
+    description: "Portfolio of Rudra Upasani, a Full Stack Developer and Freelancer.",
     images: ["/opengraph-image1.png"],
-    creator: "@v1vekupasani",
+    creator: "@rudra_upasani",
   },
   icons: {
     icon: "/favicon.ico",
