@@ -138,7 +138,7 @@ export default function Home() {
             {Skills.map((skill, idx) => (
               <span key={idx} className="text-sm text-zinc-700">
                 {skill}
-                {idx !== Skills.length - 1 && " •"}
+                {idx !== Skills.length - 1 && " /"}
               </span>
             ))}
           </div>
