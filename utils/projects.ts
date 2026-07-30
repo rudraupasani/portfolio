@@ -31,10 +31,29 @@ export const ProjectList: Project[] = [
         link: "https://novaapi-rudra.vercel.app"
     },
     {
+        projectName: "BeatFlow - Music App",
+        imageSrc: "/r1.jpg",
+        desc: "A modern music app.",
+        link: "https://beatflow--49ciecxpwd.expo.app"
+    },
+    {
         projectName: "CloudDrive App",
         imageSrc: "/r1.jpg",
         desc: "Google Drive-like file storage app",
         link: "https://cloud-rudraupasani.netlify.app/"
     },
+    {
+        projectName: "lumexa",
+        imageSrc: "/r1.jpg",
+        desc: "A modern AI Powerd Search Engine",
+        link: "https://lumexa-beta.vercel.app/"
+    },
+    // {
+    //     projectName: "MemeLibrary",
+    //     imageSrc: "/r1.jpg",
+    //     desc: "A modern Meme Library ",
+    //     link: ""
+    // }
+
 
 ];

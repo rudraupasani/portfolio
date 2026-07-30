@@ -53,6 +53,7 @@ export default function Home() {
       >
         {/* Social Links */}
         <motion.div variants={fadeUp} className="flex gap-4 flex-wrap">
+
           {[
             ["twitter", "https://x.com/rudra_upasani"],
             ["github", "https://github.com/rudraupasani"],
@@ -96,7 +97,15 @@ export default function Home() {
           <Title title="currently" />
           <p className="mt-3 text-zinc-600 leading-relaxed">
             I’m currently working as a freelance full-stack developer, building web applications for clients. I’m also open to new opportunities, so if you have a project in mind, feel free to reach out!
+
+            <Link
+              href="/work"
+              className="text-blue-600 ml-2 font-medium underline"
+            >
+              All Projects
+            </Link>
           </p>
+
         </motion.div>
 
         {/* Work */}
@@ -119,7 +128,7 @@ export default function Home() {
         <motion.div variants={fadeUp} className="mt-12">
           <Title title="Projects" />
           <div className="flex flex-col gap-3 mt-4">
-            {ProjectList.map((project, idx) => (
+            {ProjectList.slice(0, 5).map((project, idx) => (
               <ProjectTile
                 key={idx}
                 projectName={project.projectName}
@@ -149,14 +158,21 @@ export default function Home() {
           variants={fadeUp}
           className="mt-16 text-zinc-500 text-sm"
         >
-          if you want to see more of my work, check my{" "}
+          want to see everything I&apos;ve built?{" "}
+          <Link
+            href="/work"
+            className="text-blue-600 underline"
+          >
+            view all projects
+          </Link>{" "}
+          or check my{" "}
           <Link
             href="https://www.linkedin.com/in/rudraupasani"
             className="text-blue-600 underline"
           >
             linkedin
           </Link>{" "}
-          or{" "}
+          /{" "}
           <Link
             href="https://github.com/rudraupasani"
             className="text-blue-600 underline"
