@@ -46,7 +46,7 @@ export const ProjectList: Project[] = [
         projectName: "lumexa",
         imageSrc: "/r1.jpg",
         desc: "A modern AI Powerd Search Engine",
-        link: "https://lumexa-beta.vercel.app/"
+        link: "https://lumexa-v2.vercel.app/"
     },
     // {
     //     projectName: "MemeLibrary",
