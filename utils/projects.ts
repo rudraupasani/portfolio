@@ -13,6 +13,12 @@ export const ProjectList: Project[] = [
         link: "https://microcam.in/"
     },
     {
+        projectName: "StockBazar – AI-Powered Cryptocurrency Analysis",
+        imageSrc: "/r1.jpg",
+        desc: "AI-powered cryptocurrency analysis platform.",
+        link: "https://stockbazar.vercel.app"
+    },
+     {
         projectName: "Travelora - Travels Booking Website",
         imageSrc: "/r1.jpg",
         desc: "A modern travels booking website.",
@@ -24,17 +30,24 @@ export const ProjectList: Project[] = [
         desc: "A modern jewelry eCommerce website.",
         link: "https://luxora-eco.vercel.app/"
     },
+   
     {
+        projectName: "Lumexa - AI Powered Search Platform",
+        imageSrc: "/r1.jpg",
+        desc: "An AI-powered search engine and PDF finder",
+        link: "https://lumexa-beta.vercel.app"
+    },
+     {
         projectName: "NovaAPI - Mock APIs",
         imageSrc: "/r1.jpg",
         desc: "A mock API platform for developers",
         link: "https://novaapi-rudra.vercel.app"
     },
-    {
-        projectName: "BeatFlow - Music App",
+     {
+        projectName: "FoodVila - Food Recipe Website",
         imageSrc: "/r1.jpg",
-        desc: "A modern music app.",
-        link: "https://beatflow--49ciecxpwd.expo.app"
+        desc: "A food recipe website with a modern design.",
+        link: "https://foodviila.vercel.app"
     },
     {
         projectName: "CloudDrive App",
@@ -43,17 +56,10 @@ export const ProjectList: Project[] = [
         link: "https://cloud-rudraupasani.netlify.app/"
     },
     {
-        projectName: "lumexa",
+        projectName: "ChatVerse - AI Chat App",
         imageSrc: "/r1.jpg",
-        desc: "A modern AI Powerd Search Engine",
-        link: "https://lumexa-v2.vercel.app/"
-    },
-    // {
-    //     projectName: "MemeLibrary",
-    //     imageSrc: "/r1.jpg",
-    //     desc: "A modern Meme Library ",
-    //     link: ""
-    // }
-
+        desc: "An AI-powered chat application with multiple features.",
+        link: "https://chatverse-rudraupasani.netlify.app/"
+    }
 
 ];
