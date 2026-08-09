@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { ProjectList } from "@/utils/projects";
 
+const MotionLink = motion(Link);
+
 /* ------------------ Animations ------------------ */
 
 const container: Variants = {
@@ -84,15 +86,13 @@ export default function WorkPage() {
           className="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           {ProjectList.map((project, idx) => (
-            <motion.a
+            <MotionLink
               key={idx}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/projects/${project.slug}`}
               variants={cardVariant}
               whileHover={{ y: -4, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative flex flex-col gap-4 p-5 rounded-2xl border border-zinc-200/80 bg-white hover:border-zinc-300 hover:shadow-lg hover:shadow-zinc-200/50 transition-all duration-300 cursor-pointer"
+              className="group relative flex flex-col gap-4 p-5 rounded-2xl border border-zinc-200/80 bg-white"
             >
               {/* Top row: icon + arrow */}
               <div className="flex items-start justify-between">
@@ -105,14 +105,14 @@ export default function WorkPage() {
                     className="object-cover h-full w-full"
                   />
                 </div>
-                <span className="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-100 group-hover:bg-blue-50 transition-colors">
-                  <ArrowUpRight className="size-4 text-zinc-400 group-hover:text-blue-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                <span className="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-100">
+                  <ArrowUpRight className="size-4 text-zinc-400" />
                 </span>
               </div>
 
               {/* Project info */}
               <div className="flex flex-col gap-1">
-                <h2 className="font-semibold text-zinc-900 group-hover:text-blue-600 transition-colors leading-snug">
+                <h2 className="font-semibold text-zinc-900 transition-colors leading-snug">
                   {project.projectName}
                 </h2>
                 <p className="text-sm text-zinc-500 leading-relaxed">
@@ -121,8 +121,8 @@ export default function WorkPage() {
               </div>
 
               {/* Subtle bottom accent line */}
-              <div className="absolute bottom-0 left-5 right-5 h-[2px] rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.a>
+              <div className="absolute bottom-0 left-5 right-5 h-[2px] rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 " />
+            </MotionLink>
           ))}
         </motion.div>
 

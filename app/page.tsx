@@ -134,7 +134,7 @@ export default function Home() {
                 projectName={project.projectName}
                 imageSrc={project.imageSrc}
                 desc={project.desc}
-                link={project.link}
+                slug={project.slug}
               />
             ))}
           </div>

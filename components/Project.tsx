@@ -9,25 +9,24 @@ interface ProjectTileProps {
     projectName: string;
     imageSrc: string;
     desc: string;
-    link: string;
+    slug: string;
 }
 
 export const ProjectTile = ({
     imageSrc,
     projectName,
     desc,
-    link,
+    slug,
 }: ProjectTileProps) => {
     return (
         <MotionLink
-            href={link}
-            target="_blank"
-            className="flex flex-col gap-1 px-3 -mx-3 py-2 rounded-lg border border-transparent  hover:bg-zinc-50 transition-colors group"
+            href={`/projects/${slug}`}
+            className="flex flex-col gap-1 px-3 -mx-3 py-2 rounded-lg border border-transparent"
             whileHover={{ y: -2 }}
             transition={{ type: "spring" as const, stiffness: 280 }}
         >
             <div className="flex items-center justify-between w-full">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                     <Image
                         src={imageSrc}
                         alt={projectName}
@@ -36,7 +35,7 @@ export const ProjectTile = ({
                         className="h-[35px] w-[35px] rounded-full border border-zinc-200"
                     />
                     <div className="flex flex-col">
-                        <span className="font-medium text-zinc-900 group-hover:text-blue-600 transition-colors">
+                        <span className="font-medium text-zinc-900">
                             {projectName}
                         </span>
                         <p className="text-sm text-zinc-500 leading-normal">
@@ -45,7 +44,7 @@ export const ProjectTile = ({
                     </div>
                 </div>
 
-                <ArrowUpRight className="size-4 text-zinc-400 group-hover:text-blue-500 transition-colors" />
+                <ArrowUpRight className="size-4 text-zinc-400" />
             </div>
         </MotionLink>
     );

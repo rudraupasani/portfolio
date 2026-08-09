@@ -22,7 +22,7 @@ export const WorkedAt = ({
         <MotionLink
             href={link}
             target="_blank"
-            className="flex items-center gap-4 py-2 -mx-2 px-2 rounded-lg hover:bg-zinc-100/50 transition-colors group"
+            className="flex items-center gap-4 py-2 -mx-2 px-2 rounded-lg"
             whileHover={{ y: -2 }}
             transition={{ type: "spring" as const, stiffness: 300 }}
         >
@@ -38,11 +38,11 @@ export const WorkedAt = ({
 
             <div className="flex flex-col grow">
                 <div className="flex items-center gap-2">
-                    <span className="font-medium text-zinc-900 group-hover:text-blue-600 transition-colors">
+                    <span className="font-medium text-zinc-900">
                         {companyName}
                     </span>
 
-                    <ArrowUpRight className="size-4 text-zinc-400 group-hover:text-blue-500 opacity-0 group-hover:opacity-100 transition-all" />
+                    <ArrowUpRight className="size-4 text-zinc-400" />
                 </div>
 
                 <p className="text-sm text-zinc-500">{role}</p>

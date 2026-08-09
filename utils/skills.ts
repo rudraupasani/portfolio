@@ -14,5 +14,6 @@ export const Skills = [
     "github",
     "vscode",
     "antigravity",
-    "gasp"
+    "gasp",
+    "My SQL"
 ]
