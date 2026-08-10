@@ -79,11 +79,10 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
                 <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
                   {project.projectName}
                 </h1>
-                <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${
-                  isFreelance 
-                    ? "bg-amber-50 text-amber-700 border-amber-200" 
-                    : "bg-blue-50 text-blue-700 border-blue-200"
-                }`}>
+                <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${isFreelance
+                  ? "bg-amber-50 text-amber-700 border-amber-200"
+                  : "bg-blue-50 text-blue-700 border-blue-200"
+                  }`}>
                   {isFreelance ? "Freelance & Private" : "Open Source"}
                 </span>
               </div>
@@ -118,8 +117,8 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
                 </h2>
                 <div className="grid grid-cols-1 gap-3">
                   {project.features.map((feature, index) => (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className="flex items-start gap-3 p-4 rounded-xl border border-zinc-200/60 bg-white hover:border-zinc-300/80 transition-all shadow-xs"
                     >
                       <span className="flex items-center justify-center size-5 rounded-full bg-blue-50 text-blue-600 shrink-0 mt-0.5">
@@ -208,7 +207,7 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
                   Timeline
                 </span>
                 <span className="font-medium text-zinc-800">
-                  {isFreelance ? "2024 - 2025" : "Completed"}
+                  {isFreelance ? "2025" : "Completed"}
                 </span>
               </div>
               <div className="flex items-center justify-between text-zinc-600">
