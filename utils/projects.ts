@@ -75,6 +75,22 @@ export const ProjectList: Project[] = [
         ]
     },
     {
+        slug: "beatflow",
+        projectName: "BeatFlow - Music App",
+        imageSrc: "/r1.jpg",
+        desc: "A modern music app.",    
+        link: "https://beatflow--49ciecxpwd.expo.app",
+        githubLink: "",
+        techStack: ["React Native", "Expo GO", "Supabase"],
+        longDesc: "A modern music streaming and discovery application built for mobile platforms. Offers users a seamless experience to explore, play, and manage their favorite tracks and playlists.",
+        features: [
+            "Real-time music streaming with adaptive bitrate support",
+            "Intuitive playlist creation and management",
+            "Personalized music recommendations based on listening habits",
+            "Offline listening capabilities for downloaded tracks"
+        ]
+    },
+    {
         slug: "lumexa",
         projectName: "Lumexa - AI Powered Search Platform",
         imageSrc: "/r1.jpg",
