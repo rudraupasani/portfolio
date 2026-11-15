@@ -22,30 +22,26 @@ export const WorkedAt = ({
         <MotionLink
             href={link}
             target="_blank"
-            className="flex items-center gap-4 py-2 -mx-2 px-2 rounded-lg"
-            whileHover={{ y: -2 }}
+            className="flex items-center gap-3 py-2.5 -mx-3 px-3 rounded-lg hover:bg-zinc-100/70 transition-colors"
+            whileHover={{ y: -1 }}
             transition={{ type: "spring" as const, stiffness: 300 }}
         >
-            <div className="relative shrink-0">
-                <Image
-                    src={imageSrc}
-                    alt={companyName}
-                    height={35}
-                    width={35}
-                    className="h-[35px] w-[35px] rounded-full border border-zinc-200"
-                />
-            </div>
+            <Image
+                src={imageSrc}
+                alt={companyName}
+                height={32}
+                width={32}
+                className="h-8 w-8 rounded-full border border-zinc-200 object-cover shrink-0"
+            />
 
             <div className="flex flex-col grow">
-                <div className="flex items-center gap-2">
-                    <span className="font-medium text-zinc-900">
+                <div className="flex items-center gap-1.5">
+                    <span className="font-medium text-sm text-zinc-900">
                         {companyName}
                     </span>
-
-                    <ArrowUpRight className="size-4 text-zinc-400" />
+                    <ArrowUpRight className="size-3.5 text-zinc-400" />
                 </div>
-
-                <p className="text-sm text-zinc-500">{role}</p>
+                <p className="text-xs text-zinc-500">{role}</p>
             </div>
         </MotionLink>
     );

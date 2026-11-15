@@ -10,7 +10,6 @@ import { WorkedAt } from "@/components/WorkedAt";
 import { ProjectList } from "@/utils/projects";
 import { Skills } from "@/utils/skills";
 import { WorkList } from "@/utils/work";
-import { Verified } from "lucide-react";
 
 /* ------------------ Animations ------------------ */
 
@@ -35,11 +34,6 @@ const fadeUp: Variants = {
   },
 };
 
-const hoverLift = {
-  whileHover: { y: -2, scale: 1.03 },
-  transition: { type: "spring", stiffness: 300 },
-};
-
 /* ------------------ Page ------------------ */
 
 export default function Home() {
@@ -53,20 +47,19 @@ export default function Home() {
       >
         {/* Social Links */}
         <motion.div variants={fadeUp} className="flex gap-4 flex-wrap">
-
           {[
-            ["twitter", "https://x.com/rudra_upasani"],
-            ["github", "https://github.com/rudraupasani"],
-            ["linkedin", "https://www.linkedin.com/in/rudraupasani"],
-            ["email", "mailto:rudraupasani7@gmail.com"],
-            ["instagram", "https://instagram.com/rudraupasani.in"],
+            ["Twitter", "https://x.com/rudra_upasani"],
+            ["GitHub", "https://github.com/rudraupasani"],
+            ["LinkedIn", "https://www.linkedin.com/in/rudraupasani"],
+            ["Email", "mailto:rudraupasani7@gmail.com"],
+            ["Instagram", "https://instagram.com/rudraupasani.in"],
           ].map(([label, link], idx) => (
             <motion.a
               key={idx}
               href={link}
               target="_blank"
-              className="text-blue-600 font-medium hover:underline"
-              whileHover={{ y: -2, scale: 1.03 }}
+              className="text-blue-600 text-sm font-medium hover:underline"
+              whileHover={{ y: -2 }}
               transition={{ type: "spring" as const, stiffness: 300 }}
             >
               {label}
@@ -75,43 +68,47 @@ export default function Home() {
         </motion.div>
 
         {/* Profile */}
-        <motion.div variants={fadeUp} className="mt-12">
+        <motion.div variants={fadeUp} className="mt-10 flex gap-4">
           <Image
             src="/profile.jpg"
             alt="Rudra Upasani"
-            width={64}
-            height={64}
+            width={80}
+            height={80}
             className="rounded-full border border-zinc-200"
           />
-
-          <h1 className="text-2xl font-semibold mt-4">Rudra Upasani
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48" className="inline-block ml-1 mb-1">
-              <polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon>
-            </svg>
-          </h1>
-          <p className="text-zinc-600 mt-1">20 y/o Full Stack Developer, freelancer</p>
+          <div className="flex flex-col">
+            <h1 className="text-2xl font-semibold mt-4 flex items-center gap-1.5">
+              Rudra Upasani
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
+                <polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884" />
+                <polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926" />
+              </svg>
+            </h1>
+            <p className="text-zinc-500 mt-1">20 y/o Full Stack Developer, Freelancer</p>
+          </div>
         </motion.div>
 
         {/* Currently */}
-        <motion.div variants={fadeUp} className="mt-12">
+        <motion.div variants={fadeUp} className="mt-6">
           <Title title="currently" />
           <p className="mt-3 text-zinc-600 leading-relaxed">
-            I’m currently working as a freelance full-stack developer, building web applications for clients. I’m also open to new opportunities, so if you have a project in mind, feel free to reach out!
-
-            <Link
-              href="/work"
-              className="text-blue-600 ml-2 font-medium underline"
+            I&apos;m currently working as a freelance full-stack developer,
+            building web applications for clients . I&apos;m also open to new
+            opportunities, feel free to {" "}
+            <a
+              href="mailto:rudraupasani7@gmail.com"
+              className="text-blue-600 font-medium hover:underline"
             >
-              All Projects
-            </Link>
+              reach out
+            </a>
+            .
           </p>
-
         </motion.div>
 
         {/* Work */}
-        {/* <motion.div variants={fadeUp} className="mt-12">
+        <motion.div variants={fadeUp} className="mt-6">
           <Title title="where i've worked" />
-          <div className="flex flex-col gap-3 mt-4">
+          <div className="flex flex-col gap-2 mt-3">
             {WorkList.map((work, idx) => (
               <WorkedAt
                 key={idx}
@@ -122,12 +119,12 @@ export default function Home() {
               />
             ))}
           </div>
-        </motion.div> */}
+        </motion.div>
 
         {/* Projects */}
-        <motion.div variants={fadeUp} className="mt-12">
-          <Title title="Projects" />
-          <div className="flex flex-col gap-3 mt-4">
+        <motion.div variants={fadeUp} className="mt-6">
+          <Title title="projects" />
+          <div className="flex flex-col gap-1 mt-3">
             {ProjectList.slice(0, 5).map((project, idx) => (
               <ProjectTile
                 key={idx}
@@ -141,13 +138,15 @@ export default function Home() {
         </motion.div>
 
         {/* Skills */}
-        <motion.div variants={fadeUp} className="mt-12">
+        <motion.div variants={fadeUp} className="mt-10">
           <Title title="skills" />
-          <div className="flex flex-wrap gap-3 mt-4">
+          <div className="flex flex-wrap gap-2 mt-3">
             {Skills.map((skill, idx) => (
-              <span key={idx} className="text-sm text-zinc-700">
+              <span
+                key={idx}
+                className="text-xs font-medium text-zinc-600 bg-zinc-100 border border-zinc-200 px-2.5 py-1 rounded-md"
+              >
                 {skill}
-                {idx !== Skills.length - 1 && " /"}
               </span>
             ))}
           </div>
@@ -156,29 +155,28 @@ export default function Home() {
         {/* Footer */}
         <motion.div
           variants={fadeUp}
-          className="mt-16 text-zinc-500 text-sm"
+          className="mt-14 pt-6 border-t border-zinc-200 text-zinc-400 text-sm flex items-center justify-between"
         >
-          want to see everything I&apos;ve built?{" "}
-          <Link
-            href="/work"
-            className="text-blue-600 underline"
-          >
-            view all projects
-          </Link>{" "}
-          or check my{" "}
-          <Link
-            href="https://www.linkedin.com/in/rudraupasani"
-            className="text-blue-600 underline"
-          >
-            linkedin
-          </Link>{" "}
-          /{" "}
-          <Link
-            href="https://github.com/rudraupasani"
-            className="text-blue-600 underline"
-          >
-            github
-          </Link>
+          <span>© {new Date().getFullYear()} Rudra Upasani</span>
+          <div className="flex gap-4">
+            <Link href="/work" className="text-zinc-500 hover:text-zinc-900 transition-colors">
+              All Projects
+            </Link>
+            <a
+              href="https://github.com/rudraupasani"
+              target="_blank"
+              className="text-zinc-500 hover:text-zinc-900 transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rudraupasani"
+              target="_blank"
+              className="text-zinc-500 hover:text-zinc-900 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </section>

@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'morfex.vercel.app',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'technovavvn.in',
+        port: '',
+        pathname: '/**',
       }
     ],
   }
